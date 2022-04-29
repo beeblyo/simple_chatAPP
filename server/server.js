@@ -18,6 +18,18 @@ let io = socketIO(server);
 io.on("connection",(socket)=>{
   console.log("A new user is just connected");
   
+  // created custom event-listening
+  socket.on("createMessage",(message)=>{
+    console.log("createMessage", message);
+  })
+
+  // got custom event-listening from client AND send message to client.
+  socket.emit("newMessage",{
+    from: "server",
+    text: "yo whats up?"
+  })
+
+
   socket.on("disconnect",()=>{
     console.log('user is disconnected');
   })
