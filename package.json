@@ -4,6 +4,7 @@
   "description": "for simple chat program",
   "main": "index.js",
   "scripts": {
+    "start" : "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "beebly",
@@ -11,6 +12,10 @@
   "dependencies": {
     "express": "^4.18.0",
     "moment": "^2.29.3",
-    "socket.io": "^4.5.0"
+    "socket.io": "^4.5.0",
+    "yarn": "^1.22.18"
+  },
+  "devDependencies": {
+    "source-map-loader": "^3.0.1"
   }
 }
